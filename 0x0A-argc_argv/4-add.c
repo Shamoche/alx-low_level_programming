@@ -4,14 +4,14 @@
 #include <ctype.h>
 
 /**
- * main - add positive values
+ * main - add positive numbers
  * @argc: n args
  * @argv: arr args
  * Return: 0
  */
 int main(int argc, char *argv[])
 {
-	unsigned int i, sum, count;
+	unsigned int i, sum, num;
 
 	sum = 0;
 
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 			}
 		}
 		num = atoi(argv[argc]);
-		sum += count;
+		sum += num;
 	}
 	printf("%d\n", sum);
 	return (sum);
