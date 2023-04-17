@@ -1,5 +1,8 @@
-#include <stdio.h> // For standard input-output operations
-#include <stdlib.h> // For the abs() function used in the example
+#ifndef FILE_ABS
+#define FILE_ABS
 
-#define ABS(x) ( ( (x) < 0 ) ? -(x) : (x) )
+#define ABS(X) ((X) < 0 ? -1 * (X) : (X))
+
+
+#endif
 

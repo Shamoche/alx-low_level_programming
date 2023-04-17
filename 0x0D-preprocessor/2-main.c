@@ -1,7 +1,12 @@
-#include <stdio.h> // Include standard input-output library
+#include <stdio.h>
 
-int main() {
-    printf("%s\n", __FILE__); // Print the name of the file using __FILE__ macro and a newline character
-    return 0; // Return 0 to indicate successful completion of the program
+/**
+ * main - check the code for alx SE *
+ * Return: Always 0.
+ */
+
+int main(void)
+{
+	printf("%s\n", __FILE__);
+	return (0);
 }
-
