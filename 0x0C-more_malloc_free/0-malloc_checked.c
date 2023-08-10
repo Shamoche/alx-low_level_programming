@@ -1,16 +1,20 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 
-// Function to allocate memory and check for allocation success
-void *malloc_checked(size_t size)
+/**
+ * *malloc_checked - allocates memory using malloc
+ * @b: number of bytes to allocate
+ *
+ * Return: a pointer to the allocated memory
+ */
+void *malloc_checked(unsigned int b)
 {
-    void *ptr = malloc(size);  // Allocate memory of the specified size
+	void *ptr;
 
-    if (ptr == NULL)           // Check if allocation was successful
-    {
-        fprintf(stderr, "Memory allocation failed.\n");
-        exit(98);              // Terminate the process with status 98
-    }
+	ptr = malloc(b);
 
-    return ptr;                // Return the allocated memory pointer
+	if (ptr == NULL)
+		exit(98);
+
+	return (ptr);
 }
