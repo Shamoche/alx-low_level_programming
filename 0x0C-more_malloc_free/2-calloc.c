@@ -3,45 +3,44 @@
 
 /**
  * *_memset - fills memory with a constant byte
- * @dest: memory area to be filled
- * @value: char value to copy
- * @size: number of times to copy value
+ * @s: memory area to be filled
+ * @b: char to copy
+ * @n: number of times to copy b
  *
- * Return: pointer to the memory area dest
+ * Return: pointer to the memory area s
  */
-char *_memset(char *dest, char value, unsigned int size)
+char *_memset(char *s, char b, unsigned int n)
 {
-    unsigned int i;
+	unsigned int i;
 
-    for (i = 0; i < size; i++)
-    {
-        dest[i] = value;
-    }
+	for (i = 0; i < n; i++)
+	{
+		s[i] = b;
+	}
 
-    return dest;
+	return (s);
 }
 
 /**
  * *_calloc - allocates memory for an array
- * @num_elements: number of elements in the array
- * @element_size: size of each element
+ * @nmemb: number of elements in the array
+ * @size: size of each element
  *
  * Return: pointer to allocated memory
  */
-void *_calloc(unsigned int num_elements, unsigned int element_size)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
-    char *ptr;
+	char *ptr;
 
-    if (num_elements == 0 || element_size == 0)
-        return NULL;
+	if (nmemb == 0 || size == 0)
+		return (NULL);
 
-    ptr = malloc(element_size * num_elements);
+	ptr = malloc(size * nmemb);
 
-    if (ptr == NULL)
-        return NULL;
+	if (ptr == NULL)
+		return (NULL);
 
-    _memset(ptr, 0, num_elements * element_size);
+	_memset(ptr, 0, nmemb * size);
 
-    return ptr;
+	return (ptr);
 }
-
